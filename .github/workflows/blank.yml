@@ -38,5 +38,9 @@ jobs:
       - name: 'Create env file'
         run: |
           echo "${{ secrets.TESTE }}" > .env
-          ls
-          cat .env
+
+      - name: Run a one-line script
+        run: ls -lha
+
+      - name: "Valores"
+        run: cat .env
